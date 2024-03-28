@@ -18,17 +18,24 @@ document.addEventListener('mousemove', function(e) {
     turtleCursor.style.top = e.pageY + 10 + 'px';
     turtleCursor.style.left = e.pageX + 10 + 'px';
     document.body.appendChild(turtleCursor)
-
-
-    
 });
+
+
 
 ///
 /// Mouse Painting
 ///
 var isPainting = false;
 var paintPixels = [];
-var pixelColor = "blue";
+var pixelColor = "black";
+
+document.getElementById("clearPaintButton").addEventListener("click", function() {
+    for (pixel in paintPixels) {
+        document.body.removeChild(paintPixels[pixel]);
+    }
+    paintPixels = [];
+
+}, false);
 
 document.getElementById("redBox").addEventListener("click", function() {
     pixelColor = "#FF0000";
@@ -48,19 +55,17 @@ document.getElementById("purpleBox").addEventListener("click", function() {
 
 document.addEventListener('mousedown', function(e) {
     isPainting = true;
-    console.log(isPainting);
 });
 document.addEventListener('mouseup', function(e) {
     isPainting = false;
-    console.log(isPainting);
 });
 
 document.addEventListener('mousemove', function(e) {
     if (isPainting) {
         var paintPixel = document.createElement("div")
         paintPixel.style.zIndex = 9999;
-        paintPixel.style.width = "20px";
-        paintPixel.style.height = "20px";
+        paintPixel.style.width = "20px"; // width of paint pixels
+        paintPixel.style.height = "20px"; // height of paint pixels
         paintPixel.style.backgroundColor = pixelColor;
         paintPixel.style.position = "absolute";
         paintPixel.style.top = e.pageY + 'px';

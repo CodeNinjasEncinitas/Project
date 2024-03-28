@@ -1,107 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
-    margin: 0px;
-    background-color: black;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    background-image: url('seamless_bg.jpg');
-    background-repeat: repeat;
-    background-size: 100px 100px; 
-}
+    margin: 0px; /* removes whitespace at top of page above website */
+    font-family: "Roboto", sans-serif; /* set font to the font we imported above */
+    font-weight: 400; /* set font weight to a standard thickness */
+    background-image: url('seamless_bg.jpg'); /* image for background */
+    background-repeat: repeat; /* repeat the image instead of just showing one in the top left */
+    background-size: 100px 100px; /* width and height of repeating background image */
+    background-color: black;  /* this will only show if background image doesn't load for some reason */
 
-.section {
-    margin: 20px 40px 20px 40px;
-}
-
-#header {
-    background-color: rgb(16, 16, 250);
-    text-align: center;
-    color: white;
-    border: 5px solid white;
-}
-
-
-#main {
-    background-color: rgb(20, 199, 113);
-    text-align: center;
-    color: white;
-    border: 5px solid white;
-}
-
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    padding: 20px 0px 20px 0px;
-}
-
-.card {
-    border-radius: 20px;
-    background-color: white;
-    color: black;
-    margin: 0px 20px 0px 20px;
-    box-sizing: border-box;
-}
-
-.cardImage {
-    box-sizing: border-box;
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
+    /* makes everything unselectable */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE 10+ */
     user-select: none; /* Standard syntax */
-    pointer-events: none;
+}
+
+.section {
+    margin: 20px 40px 20px 40px; /* some spacing around each section (header, main[gallery], and footer) */
+}
+
+#header {
+    background-color: rgb(16, 16, 250); /* background color */
+    text-align: center; /* center text */
+    color: white; /* text color */
+    border: 5px solid white; /* border around #header .section div */
+}
+
+
+#main {
+    background-color: rgb(20, 199, 113); /* background color */
+    text-align: center; /* center text in parent div */
+    color: white; /* text color */
+    border: 5px solid white; /* border around #main .section div */
+}
+
+#gallery {
+    display: grid; /* grid display */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* required for nice grid display */
+    grid-gap: 20px; /* reuqired for nice grid display */
+    padding: 20px 0px 20px 0px; /* some spacing above and below the gallery section div */
+}
+
+.card {
+    border-radius: 20px; /* rounded corners radius size */
+    background-color: white; /* background color */
+    color: black; /* text color */
+    margin: 0px 20px 0px 20px; /* top margin 0, right margin 20, bottom margin 0, left margin 20 */
+    box-sizing: border-box; /* do not remove */
+}
+
+.cardImage {
+    box-sizing: border-box; /* do not remove */
+    width: 250px; /* width of image */
+    height: 250px; /* height of image */
+    margin-top: 20px; /* add a 20px margin space above each of the images */
+    pointer-events: none; /* dont allow clicking on images so the mouse-drag painting works better */
 }
 
 #footer {
-    background-color: rgb(88, 8, 154);
-    text-align: center;
-    color: white;
-    border: 5px solid white;
+    background-color: rgb(88, 8, 154); /* background color */
+    text-align: center; /* center the text within its parent div */
+    color: white; /* text color */
+    border: 5px solid white; /* border around #footer .section div */
 }
 
 h1 {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-size: 70px;
+    margin-top: 20px; /* 20px of spacing on the top */
+    margin-bottom: 0px; /* no margin spacing below the heading text */
+    font-size: 70px; /* set the font size of the <h1> */
 }
 
 
 #colorPicker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* flex display allows all color picker boxes to display in a horizontal line */
+    justify-content: center; /* center the color picker boxes in the parent div */
+    align-items: center; /* also required to center the collection of divs */
 }
 
 .colorBoxes {
-    height: 50px;
-    width: 50px;
-    border: 10px dashed white;
-    margin: 20px;
+    height: 50px; /* set height of color picker boxes to 50 */
+    width: 50px; /* set width of color picker boxes to 50 */
+    border: 10px dashed white; /* 10px dashed-style white border for color picker boxes */
+    margin: 20px; /* add 20px of space around each color picker box */
 }
 
 #redBox {
-    background-color: red;
+    background-color: red; /* set background of deiv for red color picker to red */
 }
 
 #greenBox {
-    background-color: rgb(0, 255, 64);
+    background-color: rgb(0, 255, 64); /* set background of div for green color picker to green */
 }
 
 #blueBox {
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(0, 255, 255); /* set background of div for blue color picker to blue */
 }
 
 #yellowBox {
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(251, 255, 0); /* set background of div for yellow color picker to yellow */
 }
 
 #purpleBox {
-    background-color: rgb(217, 0, 255);
+    background-color: rgb(217, 0, 255); /* set background of div for purple color picker to purple */
 }
 
 #clearPaintButton {
-    margin:10px;
+    margin:10px; /* add spacing around the clear paint button */
 }
