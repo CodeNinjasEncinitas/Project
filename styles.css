@@ -14,11 +14,12 @@ body {
 }
 
 #header {
-    background-color: rgb(37, 124, 255);
+    background-color: rgb(16, 16, 250);
     text-align: center;
     color: white;
     border: 5px solid white;
 }
+
 
 #main {
     background-color: rgb(20, 199, 113);
@@ -29,7 +30,7 @@ body {
 
 #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     padding: 20px 0px 20px 0px;
 }
@@ -44,9 +45,14 @@ body {
 
 .cardImage {
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     margin-top: 20px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+    pointer-events: none;
 }
 
 #footer {
@@ -57,5 +63,45 @@ body {
 }
 
 h1 {
-    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 70px;
+}
+
+
+#colorPicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorBoxes {
+    height: 50px;
+    width: 50px;
+    border: 10px dashed white;
+    margin: 20px;
+}
+
+#redBox {
+    background-color: red;
+}
+
+#greenBox {
+    background-color: rgb(0, 255, 64);
+}
+
+#blueBox {
+    background-color: rgb(0, 255, 255);
+}
+
+#yellowBox {
+    background-color: rgb(251, 255, 0);
+}
+
+#purpleBox {
+    background-color: rgb(217, 0, 255);
+}
+
+#clearPaintButton {
+    margin:10px;
 }
