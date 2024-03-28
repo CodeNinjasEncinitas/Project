@@ -1,6 +1,6 @@
 ## Instructions
 
-1. Change main <h1> "title" text
+1. Change main "<h1>" title text
 2. Change Images
 3. Change Image Descriptions
 4. Change Copyright name at bottom
